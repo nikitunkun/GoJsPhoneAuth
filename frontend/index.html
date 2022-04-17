@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <title>Phone Auth</title>
+</head>
+<body>
+    <div class="container" id="container">
+        <div class="form-container sign-in-container">
+            <form action="#">
+                <h1>Phone Auth</h1>
+                <hr>
+                <select name="county" id="county" onchange="getCounty()">
+                    <option value="" disabled selected>Select County</option>
+                    <option value="US">USA</option>
+                    <option value="RU">Russia</option>
+                </select>
+                <input type="text" name="phone" id="phone" placeholder="Phone number" onclick="phoneMask()">
+                <button type="submit">Sign In</button>
+            </form>
+        </div>
+        <div class="overlay-container">
+            <div class="overlay">
+                <div class="overlay-panel overlay-right">
+                    <h1 id="status">Hello!</h1>
+                    <p id="statusText">Enter your phone and put Sign In</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="https://unpkg.com/imask"></script>
+    <script type="text/javascript" src="main.js"></script>
+</body>
+</html>
